@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .box {
+      }
+      .box--red {
+        background-color: red;
+      }
+      .box--blue {
+        background-color: blue;
+      }
+      .box--pink {
+        background-color: rgba(255, 192, 203, 0.544);
+      }
+      .box--relative {
+        position: relative;
+
+        /* chi ap dung dc toi da 2 thuoc tinh */
+        /* thuong dung lam goc cho cac phan tu con la chinh */
+
+        /* k anh huong toi nhung the xung quanh */
+        /* can theo vi tri ban dau */
+        /* mac dinh nam o layer cao hon */
+      }
+      .box--fixed {
+        position: fixed;
+        top: 0px;
+        right: 0px;
+        left: 0px;
+        bottom: 0px;
+        /* width tu dong co keo cho vua noi dung */
+        /* anh huong toi phan tu xung quanh*/
+        /* co the ap dung ca 4 thuoc tinh */
+      }
+      .box--asolute {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        left: 10px;
+        bottom: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box box--red">Relative</div>
+    <div class="box box--blue">Static</div>
+    <div class="box box--fixed box--pink">Fixed</div>
+    <div class="box box--blue">Static</div>
+
+    <div class="box box--relative box--red">
+      The cha
+      <div class="box box--asolute box--pink">The con</div>
+    </div>
+  </body>
+</html>

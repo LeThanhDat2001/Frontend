@@ -1,0 +1,28 @@
+.container {
+  height: 400px;
+  display: flex;
+
+  /* chinh huong phan tu*/
+  flex-direction: row;
+
+  /*can chinh vi tri phan tu thep truc main */
+
+  justify-content: flex-start;
+
+  /* can chinh vi tri phan tu */
+  align-items: flex-start;
+
+  /* cho phep phan tu con xuong dong */
+  flex-wrap: wrap;
+
+  /* khoang cach giua cac item */
+  gap: 20px;
+}
+
+.item {
+  background-color: gray;
+  color: pink;
+  padding: 30px;
+  width: 500px;
+  height: 100px;
+}

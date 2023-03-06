@@ -1,0 +1,32 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.hello {
+  display: flex;
+}
+
+.p {
+  display: flex;
+}
+.span {
+  display: block;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+@keyframes wavy {
+  0% {
+    transform: translate(0);
+  }
+  45% {
+    transform: translate(0);
+  }
+  55% {
+    transform: translate(0, 100%);
+  }
+  100% {
+    transform: translate(0);
+  }
+}

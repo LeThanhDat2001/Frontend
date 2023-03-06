@@ -1,0 +1,37 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+
+.dropdown {
+  padding: 10px;
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-button {
+  background-color: blue;
+  border: 0;
+  padding: 10px 20px;
+  text-transform: uppercase;
+}
+
+.dropdown:hover > .dropdown-menu {
+  display: block;
+}
+.dropdown-menu {
+  background-color: rgb(243, 67, 9);
+  padding: 10px;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  display: none;
+  list-style-type: none;
+  width: 250px;
+  box-shadow: 0 2px 10px aquamarine(0 0 0/ 15%);
+}
+.dropdown-items {
+  background-color: pink;
+  padding: 10px 20px;
+}

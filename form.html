@@ -4,43 +4,303 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link
-      rel="shortcut icon"
-      href="data:image/png;base64,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"
-      type="image/x-icon"
-    />
+    <title></title>
+    <link rel="stylesheet" href="style4.css"/>
   </head>
-</style></style>
   <body>
-    <!-- Course -->
-    <div class="course">
-      <img
-        src="https://techmaster.vn/resources/image/java-spring-boot.jpg"
-        alt=""
-      />
-      <div class="course-infor">
-        <h2>Lộ trình đào tạo Java Spring Boot Fullstack</h2>
-        <div>
-          <p>Thứ 3, 5, 7</p>
-          <p>18:30 - 21:30</p>
-          <p>Cơ sở Tố Hữu</p>
+    <!DOCTYPE html>
+<!-- saved from url=(0111)https://sebastianpetravic.webflow.io/about?fbclid=IwAR1ONVg_35Ph30Eirge7XTCJxFE0Gks09oOGv8vamZBBERnAJrFN0741Pzo -->
+<html data-wf-domain="sebastianpetravic.webflow.io" data-wf-page="601a7126493db83981c14468" data-wf-site="5fa25266badbdb239c79ef86" class=" w-mod-js w-mod-ix">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <style>
+      .wf-force-outline-none[tabindex="-1"]:focus {
+        outline: none;
+      }
+    </style>
+    <title>About</title>
+    <meta content="About" property="og:title">
+    <meta content="https://uploads-ssl.webflow.com/5fa25266badbdb239c79ef86/60b466f300312466df4b350c_Screen%20Shot%202021-05-31%20at%202.32.33%20PM.png" property="og:image">
+    <meta content="About" property="twitter:title">
+    <meta content="https://uploads-ssl.webflow.com/5fa25266badbdb239c79ef86/60b466f300312466df4b350c_Screen%20Shot%202021-05-31%20at%202.32.33%20PM.png" property="twitter:image">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <meta content="Webflow" name="generator">
+    <link href="./About_files/sebastianpetravic.webflow.bdc510591.min.css" rel="stylesheet" type="text/css">
+    <!--[if lt IE 9]>
+										<script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js" type="text/javascript"></script>
+										<![endif]-->
+    <script type="text/javascript" async="" src="./About_files/analytics.js.download"></script>
+    <script type="text/javascript">
+      ! function(o, c) {
+        var n = c.documentElement,
+          t = " w-mod-";
+        n.className += t + "js", ("ontouchstart" in o || o.DocumentTouch && c instanceof DocumentTouch) && (n.className += t + "touch")
+      }(window, document);
+    </script>
+    <link href="https://uploads-ssl.webflow.com/5fa25266badbdb239c79ef86/6007ff5eb1b315525085ea54_s%20logo%20copy%203.png" rel="shortcut icon" type="image/x-icon">
+    <link href="https://uploads-ssl.webflow.com/img/webclip.png" rel="apple-touch-icon">
+    <script async="" src="./About_files/js"></script>
+    <script type="text/javascript">
+      window.dataLayer = window.dataLayer || [];
+
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+      gtag('config', 'UA-61953192-1', {
+        'anonymize_ip': false
+      });
+    </script>
+  </head>
+  <body cz-shortcut-listen="true">
+    <div data-collapse="medium" data-animation="default" data-duration="400" data-w-id="69118560-d0bc-15fc-bbf8-b8fe5f6535b5" data-easing="ease" data-easing2="ease" role="banner" class="navigation w-nav" style="opacity: 1; transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;">
+      <div class="navigation-items">
+        <a href="https://sebastianpetravic.webflow.io/" class="logo-link w-nav-brand" aria-label="home">
+          <div class="div-block-4"></div>
+          <img src="./About_files/60baff5fcc93ec0fda8a19ba_s logo copy 3.png" width="50" alt="" class="logo-image">
+          <div class="text-block-2">Sebastian Petravic</div>
+        </a>
+        <div class="navigation-wrap">
+          <nav role="navigation" class="navigation-items w-nav-menu">
+            <a href="https://sebastianpetravic.webflow.io/about" aria-current="page" class="navigation-item w-nav-link w--current">About</a>
+            <a href="http://sebastianpetravic.webflow.io/#wf-form-Email-Form" class="navigation-item w-nav-link">Contact</a>
+            <div class="div-block-2">
+              <a href="http://sebastianpetravic.webflow.io/#works-grid" class="button w-nav-link">View Work</a>
+            </div>
+          </nav>
+          <div class="menu-button w-nav-button" style="-webkit-user-select: text;" aria-label="menu" role="button" tabindex="0" aria-controls="w-nav-overlay-0" aria-haspopup="menu" aria-expanded="false">
+            <img src="./About_files/5fa252663b6e7c73319c0c7b_menu-icon.png" width="22" alt="" class="menu-icon">
+          </div>
         </div>
       </div>
-      <form action="">
+      <div class="w-nav-overlay" data-wf-ignore="" id="w-nav-overlay-0"></div>
     </div>
-    <div>
-      <form action="">
-        <h3>Thông tin</h3>
-        <input placeholder="email" id="" />
-        <br />
-
-        <input placeholder="password" type="" />
-        <br />
-        <span>Quên mật khẩu</span>
-        <a href="">quen mat khau</a>
-        <button>Dang nhap</button>
-      </form>
+    <div data-w-id="4ed816bd-8967-d8e1-8e20-84608ccf9a89" class="social-div" style="opacity: 1; transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;">
+      <a href="https://www.linkedin.com/in/sebastianpetravic/" target="_blank" class="linkedin-link w-inline-block">
+        <img src="./About_files/601142d6c97df432960af285_logo-linkedin.png" loading="lazy" width="24" alt="" class="social-icon">
+      </a>
+      <a href="https://dribbble.com/bombasty/shots" target="_blank" class="dribbble-link w-inline-block">
+        <img src="./About_files/6011429d53142082aa4de489_logo-dribbble.png" loading="lazy" width="24" alt="" class="social-icon">
+      </a>
     </div>
+    <div class="section">
+      <div class="container">
+        <div data-w-id="9b2922ad-09b1-aebb-0430-7dee623c62c0" style="opacity: 1; transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;" class="w-layout-grid about-intro-grid">
+          <div id="w-node-_9b2922ad-09b1-aebb-0430-7dee623c62c1-81c14468" class="about-head-text-wrap">
+            <div class="div-block-9">
+              <h1 class="heading-jumbo">Hi there!</h1>
+            </div>
+            <p class="paragraph-light bigger">Fuelled by a passion for designing compelling products, I have a deep desire to excel and continuously improve in my work. Learn more about my journey below.</p>
+          </div>
+          <img src="./About_files/600d02571dd34a98dc957dc1_me12 2.png" id="w-node-_9b2922ad-09b1-aebb-0430-7dee623c62c8-81c14468" alt="" class="detail-image pic-of-me">
+        </div>
+      </div>
+    </div>
+    <div class="section">
+      <div class="container">
+        <div class="w-layout-grid skills-grid">
+          <div id="w-node-dac044b7-be90-60f3-414d-4224828ffd8a-81c14468" class="skillset-wrap">
+            <h1 class="heading-3">My Career So Far</h1>
+            <p class="paragraph-light">Always up for a challenge, I have worked for lean start-ups and was a member of the first New Zealand start-up to attend Y Combinator, the largest start-up accelerator in the world. From there, I worked my way up to Art Director and Team Lead at Appster where I oversaw the design of 30+ mobile and desktop apps. Currently I am a Senior Product Designer at Linktree leading design for the Linktree mobile app</p>
+          </div>
+          <div id="w-node-dac044b7-be90-60f3-414d-4224828ffd8f-81c14468" class="w-layout-grid services-items-grid">
+            <div id="w-node-dac044b7-be90-60f3-414d-4224828ffd90-81c14468" class="div-block-10">
+              <div class="service-name-text">UI Design</div>
+              <div class="service-name-text">UX&nbsp;Design</div>
+              <div class="service-name-text">Prototyping</div>
+              <div class="service-name-text">Branding</div>
+              <div class="service-name-text">HTML/CSS</div>
+              <div class="service-name-text">Wireframing</div>
+              <div class="service-name-text">Information Architecture</div>
+              <div class="service-name-text">User Research</div>
+              <div class="service-name-text">User Interviews</div>
+              <div class="service-name-text">Leadership</div>
+              <div class="service-name-text">Figma</div>
+              <div class="service-name-text">Adobe Suite</div>
+            </div>
+          </div>
+        </div>
+        <div class="w-layout-grid personal-features-grid">
+          <div id="w-node-dac044b7-be90-60f3-414d-4224828ffda1-81c14468">
+            <h3>Selected features</h3>
+            <div class="paragraph-light cc-position-name">Far far away, behind the word mountains, far from the.</div>
+          </div>
+          <ul id="w-node-dac044b7-be90-60f3-414d-4224828ffda6-81c14468" role="list" class="w-list-unstyled">
+            <li class="featured-item-wrap">
+              <div class="speaking-text">Far far away, behind the word</div>
+              <div class="speaking-detail">(Video)</div>
+              <a href="https://sebastianpetravic.webflow.io/about?fbclid=IwAR1ONVg_35Ph30Eirge7XTCJxFE0Gks09oOGv8vamZBBERnAJrFN0741Pzo#" class="reference-link">Suspendisse varius enim in eros elementum tristique</a>
+            </li>
+            <li class="featured-item-wrap">
+              <div class="speaking-text">Lorem ipsum dolor sit amet</div>
+              <div class="speaking-detail">(Podcast)</div>
+              <a href="https://sebastianpetravic.webflow.io/about?fbclid=IwAR1ONVg_35Ph30Eirge7XTCJxFE0Gks09oOGv8vamZBBERnAJrFN0741Pzo#" class="reference-link">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus.</a>
+            </li>
+            <li class="featured-item-wrap">
+              <div class="speaking-text">Suspendisse varius enim</div>
+              <div class="speaking-detail">(Magazine)</div>
+              <a href="https://sebastianpetravic.webflow.io/about?fbclid=IwAR1ONVg_35Ph30Eirge7XTCJxFE0Gks09oOGv8vamZBBERnAJrFN0741Pzo#" class="reference-link">Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line.</a>
+            </li>
+            <li class="featured-item-wrap">
+              <div class="speaking-text">Duis cursus, mi quis viverra ornare</div>
+              <div class="speaking-detail">(Video)</div>
+              <a href="https://sebastianpetravic.webflow.io/about?fbclid=IwAR1ONVg_35Ph30Eirge7XTCJxFE0Gks09oOGv8vamZBBERnAJrFN0741Pzo#" class="reference-link">Of blind text by the name of Lorem Ipsum decided to leave.</a>
+            </li>
+            <li class="featured-item-wrap">
+              <div class="speaking-text">Lorem ipsum dolor sit amet</div>
+              <div class="speaking-detail">(Podcast)</div>
+              <a href="https://sebastianpetravic.webflow.io/about?fbclid=IwAR1ONVg_35Ph30Eirge7XTCJxFE0Gks09oOGv8vamZBBERnAJrFN0741Pzo#" class="reference-link">For the far World of Grammar. The Big Oxmox advised her not to do so, because there were thousands of bad Commas.</a>
+            </li>
+            <li class="featured-item-wrap">
+              <div class="speaking-text">Varius enim in eros elementum tristique</div>
+              <div class="speaking-detail">(Blog)</div>
+              <a href="https://sebastianpetravic.webflow.io/about?fbclid=IwAR1ONVg_35Ph30Eirge7XTCJxFE0Gks09oOGv8vamZBBERnAJrFN0741Pzo#" class="reference-link">Wild Question Marks and devious Semikoli.</a>
+            </li>
+            <li class="featured-item-wrap">
+              <div class="speaking-text">Dolor interdum nulla</div>
+              <div class="speaking-detail">(Blog)</div>
+              <a href="https://sebastianpetravic.webflow.io/about?fbclid=IwAR1ONVg_35Ph30Eirge7XTCJxFE0Gks09oOGv8vamZBBERnAJrFN0741Pzo#" class="reference-link">But the Little Blind Text didn’t listen.</a>
+            </li>
+          </ul>
+          <div id="w-node-dac044b7-be90-60f3-414d-4224828ffdd8-81c14468">
+            <div class="upcoming-wrap">
+              <div class="label cc-speaking-label">Upcoming</div>
+              <ul role="list" class="w-list-unstyled">
+                <li>
+                  <div class="speaking-text">Dolor interdum nulla</div>
+                  <div class="speaking-detail">(Apr 2021)</div>
+                </li>
+                <li>
+                  <div class="speaking-text">Varius enim in eros elementum tristique</div>
+                  <div class="speaking-detail">(Dec 2020)</div>
+                </li>
+                <li>
+                  <div class="speaking-text">Lorem ipsum dolor sit amet</div>
+                  <div class="speaking-detail">(Mar 2020)</div>
+                </li>
+              </ul>
+            </div>
+            <div class="label">Past</div>
+            <ul role="list" class="w-list-unstyled">
+              <li>
+                <div class="speaking-text cc-past-speaking">Duis cursus, mi quis viverra ornare</div>
+                <div class="speaking-detail">(Dec 2018)</div>
+              </li>
+              <li>
+                <div class="speaking-text cc-past-speaking">Suspendisse varius enim</div>
+                <div class="speaking-detail">(Nov 2018)</div>
+              </li>
+              <li>
+                <div class="speaking-text cc-past-speaking">Lorem ipsum dolor sit amet</div>
+                <div class="speaking-detail">(Jun 2018)</div>
+              </li>
+              <li>
+                <div class="speaking-text cc-past-speaking">Far far away, behind the word</div>
+                <div class="speaking-detail">(Apr 2018)</div>
+              </li>
+              <li>
+                <div class="speaking-text cc-past-speaking">Dolor interdum nulla</div>
+                <div class="speaking-detail">(Nov 2017)</div>
+              </li>
+              <li>
+                <div class="speaking-text cc-past-speaking">Varius enim in eros elementum tristique</div>
+                <div class="speaking-detail">(Jan 2017)</div>
+              </li>
+              <li>
+                <div class="speaking-text cc-past-speaking">Lorem ipsum dolor sit amet</div>
+                <div class="speaking-detail">(Jul 2016)</div>
+              </li>
+            </ul>
+          </div>
+          <div id="w-node-dac044b7-be90-60f3-414d-4224828ffe12-81c14468">
+            <h3>Speaking</h3>
+            <div class="paragraph-light cc-position-name">The countries Vokalia and Consonantia, there live the blind texts.</div>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="social-media-heading">
+          <h1 class="heading-6">On Working With Me</h1>
+          <div class="w-layout-grid grid-2">
+            <div id="w-node-e179e2e2-9ea9-d7ba-1757-d5875fe285d8-81c14468" class="testimony-person">
+              <img src="./About_files/6003bc8a500ee553547067e4_1560732160364.jpeg" loading="lazy" sizes="150px" srcset="https://uploads-ssl.webflow.com/5fa25266badbdb239c79ef86/6003bc8a500ee553547067e4_1560732160364-p-500.jpeg 500w, https://uploads-ssl.webflow.com/5fa25266badbdb239c79ef86/6003bc8a500ee553547067e4_1560732160364.jpeg 800w" alt="" class="image-3">
+              <h5 class="heading-4">Lana Kinney</h5>
+              <div class="text-block-3">UX Researcher at AKQA</div>
+            </div>
+            <div id="w-node-dac044b7-be90-60f3-414d-4224828ffe1b-81c14468" class="paragraph-light testimonial">"Sebastian is a guru at all things UX design, consistently producing intuitive, modern, and bold designs. He is a natural problem solver in the design space so everyone went to him if they were stuck on a feature or flow. He has a arsenal of design skills including animation and graphic design. Not to mention, Seb was a design team lead, which means he managed a full team of both onshore and offshore designs reviewing and providing feedback on all of their designs... Any business would be lucky to have him."</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="section">
+      <div class="w-layout-grid social-media-grid">
+        <img src="./About_files/5fa252663b6e7c615c9c0c92_placeholder 3.svg" id="w-node-_76ba38e4-2715-c796-e82b-8239d41d1e9d-81c14468" alt="">
+        <img src="./About_files/5fa252663b6e7c615c9c0c92_placeholder 3.svg" id="w-node-_76ba38e4-2715-c796-e82b-8239d41d1e9e-81c14468" alt="">
+        <img src="./About_files/5fa252663b6e7c4e3f9c0c91_placeholder 1.svg" id="w-node-_76ba38e4-2715-c796-e82b-8239d41d1e9f-81c14468" alt="">
+        <img src="./About_files/5fa252663b6e7c4e3f9c0c91_placeholder 1.svg" id="w-node-_76ba38e4-2715-c796-e82b-8239d41d1ea0-81c14468" alt="">
+        <img src="./About_files/5fa252663b6e7c615c9c0c92_placeholder 3.svg" id="w-node-_76ba38e4-2715-c796-e82b-8239d41d1ea1-81c14468" alt="">
+        <img src="./About_files/5fa252663b6e7c4e3f9c0c91_placeholder 1.svg" id="w-node-_76ba38e4-2715-c796-e82b-8239d41d1ea2-81c14468" alt="">
+        <img src="./About_files/5fa252663b6e7c4e3f9c0c91_placeholder 1.svg" id="w-node-_76ba38e4-2715-c796-e82b-8239d41d1ea3-81c14468" alt="">
+        <img src="./About_files/5fa252663b6e7c615c9c0c92_placeholder 3.svg" id="w-node-_76ba38e4-2715-c796-e82b-8239d41d1ea4-81c14468" alt="">
+      </div>
+    </div>
+    <div data-w-id="d783a17e-0b35-a13a-0448-a852d0df4a24" class="section" style="opacity: 1; transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;">
+      <div class="container">
+        <div class="contact-form-wrap">
+          <div class="w-layout-grid">
+            <h3 id="w-node-d783a17e-0b35-a13a-0448-a852d0df4a28-d0df4a24" class="heading-2 email-link">Want to get in touch?</h3>
+            <div id="w-node-d783a17e-0b35-a13a-0448-a852d0df4a2f-d0df4a24" class="form-block w-form">
+              <form id="wf-form-Email-Form" name="wf-form-Email-Form" data-name="Email Form" method="get" class="contact-form" aria-label="Email Form">
+                <div class="w-layout-grid contact-form-grid">
+                  <div id="w-node-d783a17e-0b35-a13a-0448-a852d0df4a32-d0df4a24">
+                    <label for="Name-3" class="field-label">Name</label>
+                    <input type="text" class="text-field w-input" maxlength="256" name="Name" data-name="Name" placeholder="Enter your name" id="Name">
+                  </div>
+                  <div id="w-node-d783a17e-0b35-a13a-0448-a852d0df4a36-d0df4a24">
+                    <label for="Email-3" class="field-label">Email Address</label>
+                    <input type="email" class="text-field w-input" maxlength="256" name="Email" data-name="Email" placeholder="Enter your email" id="Email" required="">
+                  </div>
+                  <div id="w-node-d783a17e-0b35-a13a-0448-a852d0df4a3a-d0df4a24">
+                    <label for="Message" class="field-label">Message</label>
+                    <textarea id="Message" name="Message" placeholder="Enter your message" maxlength="5000" data-name="Message" class="text-field cc-textarea w-input"></textarea>
+                  </div>
+                </div>
+                <input type="submit" value="Submit" data-wait="Please wait..." class="button w-button">
+              </form>
+              <div class="status-message cc-success-message w-form-done" tabindex="-1" role="region" aria-label="Email Form success">
+                <div>Thank you! Your submission has been received!</div>
+              </div>
+              <div class="status-message cc-error-message w-form-fail" tabindex="-1" role="region" aria-label="Email Form failure">
+                <div>Oops! Something went wrong while submitting the form.</div>
+              </div>
+            </div>
+          </div>
+          <div class="div-block-5"></div>
+        </div>
+      </div>
+    </div>
+    <footer id="footer" class="footer wf-section">
+      <div class="container w-container">
+        <div class="footer-flex-container">
+          <a href="https://sebastianpetravic.webflow.io/" class="footer-logo-link w-inline-block">
+            <img src="./About_files/5ff799656e9f7150a1ceb0e6_s logo copy 5.png" alt="" class="footer-image">
+          </a>
+          <div class="div-block-8">
+            <a href="https://dribbble.com/bombasty/shots" target="_blank" class="footer-link">Dribbble</a>
+            <a href="https://www.linkedin.com/in/sebastianpetravic/" target="_blank" class="footer-link">LinkedIn</a>
+            <a href="https://sebastianpetravic.webflow.io/about" aria-current="page" class="footer-link w--current">About</a>
+            <a href="http://sebastianpetravic.webflow.io/#wf-form-Email-Form" class="footer-link">Contact</a>
+          </div>
+        </div>
+        <div class="paragraph-small">Copyright © 2020 Sebastian Petravic. All rights reserved.</div>
+      </div>
+    </footer>
+    <script src="./About_files/jquery-3.5.1.min.dc5e7f18c8.js.download" type="text/javascript" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+    <script src="./About_files/webflow.2fb0e47db.js.download" type="text/javascript"></script>
+    <!--[if lte IE 9]>
+																														<script src="//cdnjs.cloudflare.com/ajax/libs/placeholders/3.0.2/placeholders.min.js"></script>
+																														<![endif]-->
+  </body>
+</html>
   </body>
 </html>

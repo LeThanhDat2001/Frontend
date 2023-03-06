@@ -1,28 +1,24 @@
-.container {
-  height: 400px;
-  display: flex;
-
-  /* chinh huong phan tu*/
-  flex-direction: row;
-
-  /*can chinh vi tri phan tu thep truc main */
-
-  justify-content: flex-start;
-
-  /* can chinh vi tri phan tu */
-  align-items: flex-start;
-
-  /* cho phep phan tu con xuong dong */
-  flex-wrap: wrap;
-
-  /* khoang cach giua cac item */
-  gap: 20px;
+.heart {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  margin-left: 300px;
+  margin-top: 200px;
+  background-color: brown;
 }
-
-.item {
-  background-color: gray;
-  color: pink;
-  padding: 30px;
-  width: 500px;
-  height: 100px;
+.heart > * {
+  width: 200px;
+  height: 200px;
+}
+.circle {
+  border-radius: 50%;
+  position: absolute;
+}
+.circle1 {
+  bottom: 50%;
+  left: 0;
+}
+.circle2 {
+  left: 50%;
+  top: 0;
 }
